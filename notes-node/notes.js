@@ -1,5 +1,3 @@
-console.log('starting notes.js');
-
 const fs = require('fs');
 
 var fetchNotes = () => {
@@ -32,7 +30,7 @@ var duplicateNotes = notes.filter((note) => note.title === title);
 };
 
 var getAll = () => {
-  console.log('Getting all notes');
+  return fetchNotes();
 };
 
 var getNote = (title) => {
@@ -50,6 +48,7 @@ var removeNote  = (title) => {
 };
 
 var logNote = (note) => {
+  debugger;
   console.log(`--`);
   console.log(`Title: ${note.title}`);
   console.log(`Body: ${note.body}`);
